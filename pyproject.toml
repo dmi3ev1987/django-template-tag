@@ -1,6 +1,10 @@
 [tool.ruff]
 # Allow lines to be as long as 79.
 line-length = 79
+exclude = [
+    "manage.py",
+    "settings.py"
+]
 
 [tool.ruff.format]
 quote-style = "single"
@@ -14,6 +18,8 @@ ignore = [
     "D100",
     "D101",
     "D102",
+    "D103",
+    "D104",
     "D105",
     "D106",
     "D107",
