@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load menu_tags %}
+
+{% block content %}
+    <h1>Tree Menu Example</h1>
+    
+    <div class="menu-container">
+        {% draw_menu 'main_menu' %}
+    </div>
+    
+    <div class="content">
+        <p>Эта страница демонстрирует систему древовидного меню. Попробуйте выполнить следующие шаги:</p>
+        <ol>
+            <li>Добавить пункты меню в админке Django</li>
+            <li>Установите «main_menu» в качестве имени меню</li>
+            <li>Создание пунктов меню с parent-child relationships</li>
+        </ol>
+    </div>
+{% endblock %}
