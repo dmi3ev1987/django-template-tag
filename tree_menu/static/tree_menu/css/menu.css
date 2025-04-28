@@ -21,7 +21,6 @@ body {
     border-radius: 8px;
 }
 
-/* Main menu container */
 .tree-menu {
     list-style: none;
     padding-left: 0;
@@ -29,14 +28,12 @@ body {
     font-family: sans-serif;
 }
 
-/* Menu items */
 .tree-menu .menu-item {
     position: relative;
     padding-left: 15px;
     margin: 5px 0;
 }
 
-/* Menu links */
 .tree-menu .menu-link {
     display: block;
     padding: 5px 10px;
@@ -46,23 +43,14 @@ body {
     transition: all 0.2s;
 }
 
-/* Active/hover states */
 .tree-menu .menu-link.active,
 .tree-menu .menu-link:hover {
     background-color: #f0f0f0;
     color: #0066cc;
 }
 
-/* Nested menus */
 .tree-menu .tree-menu {
     padding-left: 20px;
     margin-top: 5px;
 }
 
-/* Optional: Add chevron indicators */
-.tree-menu .menu-item:before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: #999;
-}
