@@ -64,7 +64,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
             "libraries": {
-                "menu_tags": "tree_menu.templatetags.tree_menu_tags",
+                "menu_tags": "tree_menu.templatetags.menu_tags",
             },
         },
     },
