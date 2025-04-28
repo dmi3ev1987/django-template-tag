@@ -1,32 +1,5 @@
 <ul class="tree-menu">
-    {% for parent_id, children in items_by_parent.items %}
-        <li class="menu-item">
-            {% for item in children %}
-                {% if item.id in active_items %}
-                    <a href="{{ item.url }}" 
-                        class="menu-link active">
-                        {{ item.name }}
-                        {{ item.id }}
-                        {{ parent_id }}
-                    </a>
-                    {% with children=items_by_parent|get_item:item.id %}
-                        {% if children %}
-                            <ul>
-                                {% for child in children %}
-                                    <li>
-                                        <a href="{{ child.url }}" 
-                                           class="menu-link {% if child.id in active_items %}active{% endif %}">
-                                            {{ child.name }}
-                                            {{ child.id }}
-                                            {{ item.id }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% endwith %}
-                {% endif %}
-            {% endfor %}
-        </li>
+    {% for item in root_items %}
+        {% include "tree_menu/menu_item.html" with item=item items_by_parent=items_by_parent active_items=active_items %}
     {% endfor %}
 </ul>
