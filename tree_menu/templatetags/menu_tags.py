@@ -1,4 +1,5 @@
 from django import template
+from django.template.defaulttags import register as default_register
 from django.template.loader import get_template
 
 from tree_menu.models import MenuItem
@@ -38,7 +39,14 @@ def draw_menu(context, menu_name):
             'active_items': active_items,
             'current_path': current_path,
         }
+        # print("menu_items", menu_items)
+        # print("context", context)
         return template.render(context)
     # Error handling - maybe need to add error message
     except ValueError:
         return ''
+
+
+@default_register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)

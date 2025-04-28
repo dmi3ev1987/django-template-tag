@@ -1,50 +1,17 @@
-.menu-container {
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
 }
 
-.tree-menu {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.tree-menu ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.tree-menu li {
-    margin: 8px 0;
-    position: relative;
-    line-height: 1.5;
-}
-
-.tree-menu li:before {
-    content: "→";
-    position: absolute;
-    left: -15px;
-    color: #6c757d;
-}
-
-.tree-menu a {
-    text-decoration: none;
-    color: #212529;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.2s;
-}
-
-.tree-menu a:hover {
-    background: #e9ecef;
-    color: #0d6efd;
-}
-
-.tree-menu .active > a {
-    font-weight: bold;
-    color: #0d6efd;
-    background: #e7f1ff;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .content {
@@ -52,4 +19,50 @@
     padding: 20px;
     background: #f8f9fa;
     border-radius: 8px;
+}
+
+/* Main menu container */
+.tree-menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Menu items */
+.tree-menu .menu-item {
+    position: relative;
+    padding-left: 15px;
+    margin: 5px 0;
+}
+
+/* Menu links */
+.tree-menu .menu-link {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+/* Active/hover states */
+.tree-menu .menu-link.active,
+.tree-menu .menu-link:hover {
+    background-color: #f0f0f0;
+    color: #0066cc;
+}
+
+/* Nested menus */
+.tree-menu .tree-menu {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* Optional: Add chevron indicators */
+.tree-menu .menu-item:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #999;
 }

@@ -1,9 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-
-from tree_menu.views import menu_example
+from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', menu_example, name='menu-example'),
+    path('', include('tree_menu.urls')),
 ]
