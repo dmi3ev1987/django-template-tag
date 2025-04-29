@@ -83,6 +83,16 @@ python manage.py createsuperuser
 ```
 
 
+## Для тестирования меню можно заполнить БД данными из JSON
+
+
+```
+
+python manage.py loaddata db.json
+
+```
+
+
 ## Запустить приложение
 
 
@@ -91,6 +101,11 @@ python manage.py createsuperuser
 python manage.py runserver
 
 ```
+
+## Пример готового меню
+
+
+![Tree menu example](docs/images/tree-menu-example.jpg)
   
 
 ## Работа с Ruff линтером и форматтером
